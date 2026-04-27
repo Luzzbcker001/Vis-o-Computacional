@@ -37,7 +37,7 @@ with mp_hands.Hands(max_num_hands=1) as hands:
                     x1, y1 = handLms.landmark[4].x, handLms.landmark[4].y
                     x2, y2 = handLms.landmark[12].x, handLms.landmark[12].y
                     dist = math.sqrt((x2-x1)**2 + (y2-y1)**2)
-                    print(f"Distância: {dist}")
+                    #print(f"Distância: {dist}")
                     if id == 8:
                         target_x = int(lm.x * screen_w)
                         target_y = int(lm.y * screen_h)
@@ -48,7 +48,7 @@ with mp_hands.Hands(max_num_hands=1) as hands:
                     if dist < 0.03 and not clicked:
                         pag.click()
                         clicked = True
-                        print("Clicked")
+                        #print("Clicked")
                     if dist > 0.03:
                         clicked = False
 
